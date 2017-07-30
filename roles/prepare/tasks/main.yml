@@ -1,0 +1,13 @@
+---
+# tasks file
+
+- name: update system 
+  yum: 
+    name: '*'
+    state: latest
+ 
+- name: download postgres version
+  get_url:
+    url: "{{ postgres_url }}"
+    dest: "{{ download_dest }}"
+

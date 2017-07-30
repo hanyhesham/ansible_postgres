@@ -1,0 +1,8 @@
+---
+# vars file 
+
+ver: "9.6"
+client_ver: "postgresql96"
+postgres_ver:   "pgdg-redhat96-9.6-3.noarch.rpm"
+postgres_url:   "https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/{{ postgres_ver }}"
+download_dest:  "/tmp"

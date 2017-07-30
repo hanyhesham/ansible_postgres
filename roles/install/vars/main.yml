@@ -1,0 +1,5 @@
+---
+# vars file 
+
+server_ver:     "postgresql96-server"
+contrib_ver:    "postgresql96-contrib"

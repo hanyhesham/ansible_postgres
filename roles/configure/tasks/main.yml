@@ -1,0 +1,13 @@
+---
+# tasks file
+
+- name: initialize DB  
+  command: "{{ init_path }} initdb"
+  register: var
+  failed_when: var.stderr != ""
+
+- name: start service
+  command: "systemctl start {{ service_name }}" 
+
+- name: enable service
+  command: "systemctl enable {{ service_name }}" 

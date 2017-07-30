@@ -1,0 +1,6 @@
+---
+# vars file 
+
+service_name: "postgresql-{{ ver }}"
+init_path: "/usr/pgsql-{{ ver }}/bin/{{ client_ver }}-setup"
+

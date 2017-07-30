@@ -1,0 +1,20 @@
+---
+# tasks file
+
+- name: install repository 
+  yum: 
+    name: "{{ download_dest }}/{{ postgres_ver }}"
+    state: present
+
+- name: install server  
+  yum: 
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - "{{ server_ver }}"
+    - "{{ contrib_ver }}"
+
+- name: install client 
+  yum: 
+    name: "{{ client_ver }}"
+    state: latest
